@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Restaurants</h1>
-
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <% end %>
-</ul>
-
-<br>
-
+<div class="row">
+  <div class="col">
+    <h1>Restaurants</h1>
+    <div class="card-container">
+      <% @restaurants.each do |restaurant| %>
+        <div class="card">
+            <div class="card-body">
+                <%= restaurant.name %>
+                <%= link_to "More Info", restaurant_path(restaurant) %>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 <%= link_to 'New Restaurant', new_restaurant_path %>

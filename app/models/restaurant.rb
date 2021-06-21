@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  CATEGORY = ["chinese", "italian", "japanese", "french", "belgian"]
+  CATEGORY = ["chinese", "italian", "japanese", "french", "belgian", "american", "thai", "spanish"]
   has_many :reviews, dependent: :destroy
   
   validates :name, presence: true

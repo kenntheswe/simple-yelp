@@ -1,16 +1,11 @@
 <h1>New Review</h1>
-
 <%= simple_form_for [@restaurant, @review] do |f| %>
-
   <div class="form-inputs">
     <%= f.input :content %>
     <%= f.input :rating %>
   </div>
-
   <div class="form-actions">
     <%= f.submit "Add a review" %>
   </div>
-
 <% end %>
-
 <%= link_to 'Back to Restaurants', restaurants_path %>
